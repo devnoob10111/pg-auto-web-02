@@ -1,0 +1,11 @@
+
+2023/04/07 00:41:13 => 
+{"telephone":"1234567891","password":"Test1234","bank":"scb","bank_account":"1111111111","first_name":"\u0e17\u0e14\u0e2a\u0e2d\u0e1a","last_name":"\u0e23\u0e30\u0e1a\u0e1a","channel":"line","id_line":"test","bonus":"no","ref":null,"prefix":"tsb88"}
+2023/04/07 00:41:42 => 
+{"telephone":"1234567891","password":"Test1234","bank":"scb","bank_account":"1111111111","first_name":"\u0e17\u0e14\u0e2a\u0e2d\u0e1a","last_name":"\u0e23\u0e30\u0e1a\u0e1a","channel":"line","id_line":"test","bonus":"no","ref":null,"prefix":"tsb88"}
+2023/04/07 00:43:04 => 
+{"telephone":"1234567891","password":"Test1234","bank":"scb","bank_account":"1111111111","first_name":"\u0e17\u0e14\u0e2a\u0e2d\u0e1a","last_name":"\u0e23\u0e30\u0e1a\u0e1a","channel":"google","id_line":"test","bonus":"no","ref":null,"prefix":"tsb88"}
+2023/04/07 00:43:11 => 
+{"telephone":"1234567891","password":"Test1234+","bank":"scb","bank_account":"1111111111","first_name":"\u0e17\u0e14\u0e2a\u0e2d\u0e1a","last_name":"\u0e23\u0e30\u0e1a\u0e1a","channel":"google","id_line":"test","bonus":"no","ref":null,"prefix":"tsb88"}
+2023/04/07 00:47:39 => 
+{"telephone":"1234567891","password":"Test1234+","bank":"scb","bank_account":"1111111111","first_name":"\u0e17\u0e14\u0e2a\u0e2d\u0e1a","last_name":"\u0e23\u0e30\u0e1a\u0e1a","channel":"google","id_line":"test","bonus":"no","ref":null,"prefix":"tsb88"}

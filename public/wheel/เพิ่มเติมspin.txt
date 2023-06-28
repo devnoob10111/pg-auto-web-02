@@ -1,0 +1,103 @@
+
+******************แก้css ปุ่ม SPIN
+canvas.bbg{
+    background-image: url(./sp.png),url(./317635546_941437.png);
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 86px,400px;
+}
+
+*****แท่งคะแนนโหลด****
+
+  <div class="progress-bar" id="progress-bar" data-status="0%" aria-label="Progress bar."></div>
+
+
+***** javascript
+
+            const progressBar = document.getElementById("progress-bar");
+            let statusVal = 400;
+            let id = null;
+
+            updateProgressBar();
+
+            function updateProgressBar() {
+            const isMaxVal = statusVal === 1000;
+            progressBar.dataset.status = statusVal + " คะแนน";
+            progressBar.setAttribute(
+                "style",
+                `--__progress-bar__status_wh: ${statusVal/10}%;`
+            );
+            }
+
+
+*****css
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* basic color palette */
+  --white-1: hsl(0, 0%, 100%);
+  --black-2: hsl(39deg 2% 23%);
+  --black-1: hsl(0, 0%, 10%);
+  --green-1: #b30404;
+  /* fonts */
+  --ft-fy-fallback-1: sans-serif;
+  --ft-fy-1: "Poppins", var(--ft-fy-fallback-1);
+  --ft-se-400: 1.05rem;
+  /* spaces */
+  --space-400: 2em;
+  /* z-index */
+  --zx-400: 400;
+}
+
+/* components */
+.page {
+  color: var(--white-1);
+  display: grid;
+  font-size: var(--ft-se-400);
+  font-family: var(--ft-fy-1);
+  background-color: var(--black-1);
+  min-height: 100vh;
+  place-items: center;
+}
+
+.progress-bar {
+  width: calc(100% - var(--space-400));
+  height: var(--__progress-bar_ht, 40px);
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  border: 2px solid #d6a74d;
+  border-radius: 50vw;
+  background-color: var(--__progress-bar_bd-cr, var(--black-2));
+  place-items: center;
+  max-width: var(--__progress-bar_max-wh, 500px);
+}
+.progress-bar::before {
+    font-weight: bold;
+    background: linear-gradient( 
+180deg
+ , rgba(213, 172, 79, 1) 0%, rgba(214, 174, 81, 1) 2.99%, rgba(219, 182, 89, 1) 4.62%, rgba(226, 194, 103, 1) 5.93%, rgba(236, 213, 122, 1) 7.05%, rgba(250, 236, 147, 1) 8.06%, rgba(255, 245, 157, 1) 8.38%, rgba(243, 225, 136, 1) 9.88%, rgba(212, 173, 81, 1) 12.99%, rgba(212, 172, 80, 1) 13.03%, rgba(212, 172, 80, 1) 13.05%, rgba(194, 152, 67, 1) 16.03%, rgba(184, 141, 59, 1) 19.06%, rgba(180, 137, 56, 1) 22.2%, rgba(187, 147, 65, 1) 29.95%, rgba(205, 173, 89, 1) 43.06%, rgba(234, 216, 128, 1) 59.8%, rgba(255, 246, 156, 1) 70.18%, rgba(237, 220, 133, 1) 70.67%, rgba(216, 189, 106, 1) 71.38%, rgba(199, 165, 85, 1) 72.13%, rgba(187, 148, 70, 1) 72.92%, rgba(180, 138, 61, 1) 73.78%, rgba(178, 135, 58, 1) 74.84%, rgba(186, 144, 64, 1) 79.35%, rgba(211, 171, 82, 1) 83.65%, rgba(209, 171, 98, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D5AC4F', endColorstr='#D1AB62', GradientType=0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  z-index: var(--zx-400);
+  position: absolute;
+  content: attr(data-status);
+}
+.progress-bar::after {
+  width: var(--__progress-bar__status_wh, 0%);
+  position: absolute;
+  content: "";
+  height: 100%;
+  justify-self: start;
+  background-image: linear-gradient(to left, #7a0707, #770808, #750808, #720909, #700909, #730909, #760809, #790809, #820708, #8b0607, #940506, #9d0404);
+}
